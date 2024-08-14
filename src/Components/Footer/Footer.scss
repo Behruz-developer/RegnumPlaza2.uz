@@ -1,22 +1,17 @@
-.footer {
-    background: #384d8b;
-    padding: 80px 0px;
+:root{
+    --gr-1: #005144;
+    --gr-2: #D4E2E0;
+  }
 
-    @include media (1200px) {
-        padding: 60px 0;
-    }
-    @include media (800px) {
-        padding: 40px 0;
-    }
+.footer {
+    background: var(--gr-1);
+
     &_box {
         color: white;
-        display: grid;
-        grid-template-columns: repeat(2, 49%);
-        grid-template-rows: repeat(1,1fr);
-        column-gap: 24px;
-        row-gap: 10px;
-
-        @include media (660px) {
+        display: flex;
+        width: 100%;
+        gap: 2%;
+        @include media (650px) {
             display: flex;
             flex-direction: column;
         }
@@ -47,11 +42,23 @@
     }
     &_card1 {
         grid-row: span 1;
+        padding: 80px 0px;
+        width: 48%;
+        @include media (1200px) {
+            padding: 60px 0;
+        }
+        @include media (800px) {
+            padding: 40px 0;
+        }
+        @include media (650px) {
+            width: 100%;
+        }
     }
     &_card2 {
-        grid-row: span 2;
-        @include media(660px){
-            order: -1;
+        width: 50%;
+        // height: 60%;
+        @include media(650px){
+            width: 100%;
         }
         img{
             width: 100%;
@@ -242,7 +249,7 @@
         justify-content: center;
         font-size: 28px;
         align-items: center;
-        background: #58699e;
+        background: #296D62;
         border-radius: 8px;
         @include media(1200px) {
             width: 40px;
@@ -260,19 +267,17 @@
 .leaflet-marker-icon{
     width: 100px;
 }
-.map_container{
-    outline: none;
-    border-radius: 10px;
-    width: 100%;
-    height: 600px;
-
-    @include media (1400px){
-        height: 500px;
-    }
-    @include media (1200px){
-        height: 430px;
-    }
-    @include media (1000px){
+.map_box{
+    height: 100%;
+    @include media (650px){
         height: 300px;
     }
 }
+.map_container{
+    outline: none;
+    width: 100%;
+    height: 100%;
+
+
+}   
+
