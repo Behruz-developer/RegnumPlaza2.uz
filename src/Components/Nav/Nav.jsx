@@ -136,8 +136,8 @@ const Nav = () => {
             <div className="nav_card_right">
               <div className="nav_contact">
                 <PiPhoneCallLight className="nav_phone_icon" />
-                <a href="tel: 1066" className="nav_contact_text">
-                  1066
+                <a href="tel: 1361" className="nav_contact_text">
+                  1361
                 </a>
                 <IoMenu className="nav_menu" onClick={() => setActive(true)} />
               </div>
