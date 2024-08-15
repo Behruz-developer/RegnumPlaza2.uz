@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import { CiGlobe } from "react-icons/ci";
 import { PiPhoneCallLight } from "react-icons/pi";
+import { Link } from "react-scroll";
 
 const Upcoming = ({ images }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -23,9 +24,8 @@ const Upcoming = ({ images }) => {
           {images &&
             images.map((src, index) => (
               <div
-                className={`img_card carousel-image ${
-                  index === currentIndex ? "current" : ""
-                }`}
+                className={`img_card carousel-image ${index === currentIndex ? "current" : ""
+                  }`}
                 key={index}
               >
                 <img src={src} alt="" className="" />
@@ -46,22 +46,25 @@ const Upcoming = ({ images }) => {
                         </p>
                       </div>
                       <div className="upcoming_icon2_card">
-                        <a href="#!" className="upcoming_icon2">
+                        <Link to="houses"
+                          smooth={true}
+                          offset={-50}
+
+                          duration={500} href="#!" className="upcoming_icon2">
                           Rejalashtirishni tanlash
-                        </a>
+                        </Link>
                       </div>
                       <div className="upcoming_icons">
                         <div className="upcoming_icons_card">
                           <a href="#!" className="upcoming_icon">
                             Jonli <br /> efir
                           </a>
-                          <a href="#!" className="upcoming_icon">
-                            <CiGlobe className="upcoming_globe" />
-                            360
-                          </a>
-                          <a href="#!" className="upcoming_icon">
+                          <Link to="form"
+                            smooth={true}
+                            offset={-50}
+                            duration={500} href="#!" className="upcoming_icon">
                             <PiPhoneCallLight className="upcoming_phone" />
-                          </a>
+                          </Link>
                         </div>
                       </div>
                     </div>

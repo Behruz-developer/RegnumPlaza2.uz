@@ -1,3 +1,8 @@
+:root{
+    --gr-1: #005144;
+    --gr-2: #D4E2E0;
+  }
+
 .lds-ring,
 .lds-ring div {
     box-sizing: border-box;
@@ -87,7 +92,7 @@
 }
 
 .loading {
-    background: #384D8B;
+    background: var(--gr-1);
     display: flex;
     justify-content: center;
     align-items: center;

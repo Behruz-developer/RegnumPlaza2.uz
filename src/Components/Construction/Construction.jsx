@@ -9,7 +9,7 @@ const Construction = () => {
     <div className="construction">
         <div className="container">
             <h2 className="construction_title">Qurilish jarayoni</h2>
-            <div className="construction_box">
+            <div className="construction_box" data-aos="zoom-in-up" data-aos-offset="400">
                 <div className="construction_card">
                     <img src={construction} alt="" />
                     <p className="construction_text">Iyun</p>

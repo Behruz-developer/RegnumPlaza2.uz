@@ -1,21 +1,24 @@
-import about1 from "../../assets/images/about1.svg";
-import about2 from "../../assets/images/about2.svg";
-import about3 from "../../assets/images/about3.svg";
-import about4 from "../../assets/images/about4.svg";
 import universal from "../../assets/images/universal.png";
-import house from "../../assets/images/house.png";
-
+import AOS from 'aos'
+import 'aos/dist/aos.css';
+import { useEffect } from "react";
 const About = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: true, 
+    });
+  }, []);
+
   return (
     <div className="about">
       <div className="container">
         <div className="about_box">
 
-        <div className="about_card_left">
+        <div className="about_card_left" data-aos="fade-right" data-aos-offset="-50">
             <img className="about_card_left_img" src={universal} alt="" />
             <div className="about_map_text">
               <div className="about_map_text_box">
-
                 <svg className="about_map_text_img" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path className="about_map_text_img_color" d="M16.6665 19.3506V25.3332C16.6665 25.7012 16.9518 25.9999 17.3052 25.9999H24.0292C24.3812 25.9999 24.6665 25.7012 24.6665 25.3332V19.3146" stroke="black" stroke-width="2.3994" stroke-linecap="round" stroke-linejoin="round" />
                   <path className="about_map_text_img_color" d="M15.334 20.2227L20.7767 16.6667L26.0007 20.2227" stroke="black" stroke-width="2.3994" stroke-linecap="round" stroke-linejoin="round" />
@@ -31,7 +34,7 @@ const About = () => {
               <p className="about_map_text_text2">Xaritada ko‘rish</p>
             </div>
           </div>
-          <div className="about_card_text">
+          <div className="about_card_text" data-aos="fade-left">
             <h2 className="about_title">Loyiha haqida</h2>
             <p className="about_text">
               NRG Qorasuvda hammasi ajoyib! Joylashgan o`rnidan boshlab,
@@ -49,7 +52,7 @@ const About = () => {
           </div>
 
 
-          <div className="about_card_icons">
+          <div className="about_card_icons" data-aos="fade-left">
             <div className="about_card_icon">
               <div className="about_icon_text">
                 <div className="about_icon_text_card">

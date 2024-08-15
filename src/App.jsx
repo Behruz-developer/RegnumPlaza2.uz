@@ -19,25 +19,29 @@ const App = () => {
   const [isLoading, setIsLoading] = useState(true);
 
 
-    useEffect(() => {
-        const handlePageLoad = () => {
-            if (document.readyState === 'complete') {
-                setIsLoading(false);
-            } else {
-                const interval = setInterval(() => {
-                    if (document.readyState === 'complete') {
-                        setIsLoading(false);
-                        clearInterval(interval);
-                    }
-                }, 100);
-            }
-        };
+  useEffect(() => {
+    const handlePageLoad = () => {
+      if (document.readyState === 'complete') {
+        setTimeout(() => {
+          setIsLoading(false);
+        }, 1000); // 2 soniya kutish
+      } else {
+        const interval = setInterval(() => {
+          if (document.readyState === 'complete') {
+            setTimeout(() => {
+              setIsLoading(false);
+            }, 1000); // 2 soniya kutish
+            clearInterval(interval);
+          }
+        }, 100);
+      }
+    };
 
-        handlePageLoad();
-        window.addEventListener('load', handlePageLoad);
+    handlePageLoad();
+    window.addEventListener('load', handlePageLoad);
 
-        return () => window.removeEventListener('load', handlePageLoad);
-    }, []);
+    return () => window.removeEventListener('load', handlePageLoad);
+  }, []);
   const images = [img1, img2, img3];
   return (
     <>
